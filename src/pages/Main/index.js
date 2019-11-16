@@ -6,7 +6,7 @@ import {View, Text} from 'react-native';
 export default function Main() {
   return (
     <View>
-      <Text>Olá Native</Text>
+      <Text>Olá Native adsdasda</Text>
     </View>
   );
 }

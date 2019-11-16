@@ -3,10 +3,6 @@ import {View} from 'react-native';
 
 // import { Container } from './styles';
 
-export default function Main() {
+export default function User() {
   return <View />;
 }
-
-Main.navigationOptions = {
-  headerTitle: 'Usuários',
-};

@@ -3,7 +3,19 @@ import {Keyboard} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import Api from '~/services/api';
-import {Container, Form, Input, SubmitButton} from './styles';
+import {
+  Container,
+  Form,
+  Input,
+  SubmitButton,
+  List,
+  User,
+  Avatar,
+  Name,
+  Bio,
+  ProfileButtom,
+  ProfileButtomText,
+} from './styles';
 
 export default class Main extends Component {
   static navigationOptions = {
@@ -54,6 +66,22 @@ export default class Main extends Component {
             <Icon name="add" size={20} color="#FFF" />
           </SubmitButton>
         </Form>
+
+        <List
+          data={users}
+          keyExtractor={user => user.login}
+          renderItem={({item}) => (
+            <User>
+              <Avatar source={{uri: item.avatar}} />
+              <Name>{item.name}</Name>
+              <Bio>{item.bio}</Bio>
+
+              <ProfileButtom>
+                <ProfileButtomText>Ver Pefil</ProfileButtomText>
+              </ProfileButtom>
+            </User>
+          )}
+        />
       </Container>
     );
   }
